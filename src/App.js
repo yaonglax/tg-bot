@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
+import Form from './components/Form/Form';
 const tg = window.Telegram.WebApp;
 function App() {
   useEffect(() => {
@@ -10,9 +11,8 @@ function App() {
   }
 
   return (
-    <div className="App">
-      work
-      <button onClick={onClose}>Закрыть</button>
+    <div className="form-wrapper">
+      <Form />
     </div>
   );
 }

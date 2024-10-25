@@ -1,0 +1,15 @@
+.form {
+  width: 80%;
+  height: 450px;
+  box-shadow: 0px 0px 18px 0px rgba(34, 60, 80, 0.2);
+  padding: 8px;
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form__input {
+  width: 70%;
+  height: 50px;
+}/*# sourceMappingURL=Form.css.map */
