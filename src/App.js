@@ -1,7 +1,13 @@
 import { useEffect } from 'react';
 import './App.css';
-import Form from './components/Form/Form';
+import HomePage from './Pages/HomePage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import RegistrationPage from './Pages/RegistrationPage';
+import {RoutesPath} from './Router/index'
+
+
 const tg = window.Telegram.WebApp;
+
 function App() {
   useEffect(() => {
     tg.ready();
@@ -11,10 +17,21 @@ function App() {
   }
 
   return (
-    <div className="form-wrapper">
-      <Form />
-    </div>
+    <BrowserRouter>
+    <Routes>
+    {RoutesPath.map((route, index) => {
+      return (
+      <Route 
+      key={index}
+      path={route.path}
+      element={<route.component />}
+      exact = {route.exact}
+      />)
+    })}
+    </Routes>
+    </BrowserRouter>
+  
   );
 }
-
+console.log(RoutesPath)
 export default App;
