@@ -33,5 +33,4 @@ function App() {
   
   );
 }
-console.log(RoutesPath)
 export default App;

@@ -1,7 +1,7 @@
 .form {
   width: 80%;
   height: 350px;
-  margin: 10px auto;
+  margin: 50px auto;
   box-shadow: 0px 0px 18px 0px rgba(34, 60, 80, 0.2);
   padding: 8px;
   gap: 8px;
@@ -26,4 +26,7 @@
   position: absolute;
   top: 16px;
   left: 16px;
+}
+.form__title {
+  font-size: 28px;
 }/*# sourceMappingURL=Form.css.map */
