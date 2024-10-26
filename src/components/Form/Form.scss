@@ -11,11 +11,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    &__input {
-        width: 70%;
-        height: 35px;
-    }
+    position: relative;
 
     &-wrapper {
             width: 100%;
@@ -24,6 +20,15 @@
             justify-content: center;
             align-items: center;
             margin: auto;
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        color: rgb(140, 179, 219);
+        position: absolute;
+        top: 16px;
+        left: 16px;
     }
 }
 

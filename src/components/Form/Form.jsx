@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Form.css';
 import ModalWindow from "../ModalWIndow/ModalWindow";
+import Button from "../Button/Button";
+import Input from "../Input/Input";
 
 
 const Form = ({ isSignIn }) => {
@@ -42,60 +44,59 @@ const Form = ({ isSignIn }) => {
       <>
          <div className="form-wrapper">
             <form className="form">
-               <button className="form__button" type="button" onClick={toHome}>Назад</button>
+               <button className="form__button" type="button" onClick={toHome}>	&lt;- Назад</button>
 
                {isSignIn ? (
                   !isContractVerified ? (
                      <>
                         <h1>Форма входа</h1>
-                        <input
+                        <Input
                            type="number"
-                           className="form__input input"
-                           placeholder="Номер договора"
+                           placeholder={"Номер договора"}
                            onChange={(e) => setContract(e.target.value)}
                         />
-                        <button type="button" onClick={validateForm}>Дальше</button>
+                        <Button onClick={validateForm} type='button'>Дальше</Button>
                      </>
                   ) : (
                      <>
                         <h1>Подтверждение договора</h1>
-                        <input
+                        <Input
                            type="text"
                            className="form__input input"
                            placeholder="Код подтверждения"
 
                         />
-                        <button type="button" onClick={() => alert("Код подтвержден!")}>Подтвердить</button>
+                        <Button type="button" onClick={() => alert("Код подтвержден!")}>Подтвердить</Button>
                      </>
                   )
                ) : (
                   <>
                      <h1>Форма регистрации</h1>
-                     <input
+                     <Input
                         type="text"
                         className="form__input input"
                         placeholder="ФИО"
                         onChange={(e) => setFullName(e.target.value)}
                      />
-                     <input
+                     <Input
                         type="tel"
                         className="form__input input"
                         placeholder="Телефон"
                         onChange={(e) => setPhone(e.target.value)}
                      />
-                     <input
+                     <Input
                         type="email"
                         className="form__input input"
                         placeholder="Электронная почта"
                         onChange={(e) => setEmail(e.target.value)}
                      />
-                     <input
+                     <Input
                         type="text"
                         className="form__input input"
                         placeholder="Адрес для подключения"
                         onChange={(e) => setAddress(e.target.value)}
                      />
-                     <button type="button" onClick={validateForm}>Подать заявку</button>
+                     <Button type={'button'} onClick={validateForm}>Подать заявку</Button>
                   </>
                )}
             </form>
