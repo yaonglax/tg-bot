@@ -8,10 +8,14 @@ const navigate = useNavigate();
 const toRegistration = () => {
   navigate('/registration')
 }
+const toSignIn = () => {
+  navigate('/signin')
+}
 
   return (
     <div>
-     <button onClick={toRegistration}>на форму регистрации</button>
+     <button onClick={toRegistration}>Заключить договор</button>
+     <button onClick={toSignIn}>Войти как клиент ТТК</button>
     </div>
   );
 }
