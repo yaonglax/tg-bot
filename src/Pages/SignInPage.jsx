@@ -1,11 +1,13 @@
 import React from 'react';
-import './styles/SIgnIn.scss'
+import Form from '../components/Form/Form';
 
 function SignInPage() {
+
+
+  
   return (
-    <div>
-      SignInPage
-    </div>
+      <Form isSignIn={true}/>
+    
   );
 }
 

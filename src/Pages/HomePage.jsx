@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Button from '../components/Button/Button';
+import './styles/HomePage.css'
 
 
 function HomePage() {
@@ -13,9 +15,11 @@ const toSignIn = () => {
 }
 
   return (
-    <div>
-     <button onClick={toRegistration}>Заключить договор</button>
-     <button onClick={toSignIn}>Войти как клиент ТТК</button>
+    <div className='container'>
+      <div className="container__buttons-wrapper">
+     <Button onClick={toRegistration}>Заключить договор</Button>
+     <Button onClick={toSignIn}>Войти как клиент ТТК</Button>
+    </div>
     </div>
   );
 }
